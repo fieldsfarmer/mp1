@@ -4,3 +4,318 @@
 @import "variables";
 @import "mixins";
 @import "base";
+
+@import url(http://fonts.googleapis.com/css?family=Amaranth);
+
+$font: Helvetica, sans-serif;
+$font_color: #FFFFFF;
+$strip_height: 200px;
+$name_height: 70px; 
+$section_height: 500px;
+
+@mixin margin-top($heightA, $heightB){
+	margin-top: ($heightA - $heightB)/2;
+}
+
+@mixin top($height1, $height2){
+	top: $height1+$height2;
+}
+
+body{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #18BC9D;
+	color: white;
+	font-family: $font;
+	z-index: -2;
+	display: block;
+}
+
+header{
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	background:#2C3E50;
+}
+
+.large-header{
+	height:100px;
+}
+
+.small-header{
+	height: 50px;
+}
+
+#name{
+	float:left;
+}
+
+.large-header #name {
+    margin-left:10%;
+    font-size:4em;
+    height: 50px;
+    margin-top: 25px;
+}
+
+.small-header #name{
+	font-size: 1.6em;
+	margin-left: 15%;
+	height: 25px;
+	margin-top: 13px;
+}
+
+#entries{
+	float:right; 
+}
+
+.large-header #entries {
+    margin-right:40px; 
+    margin-top: 40px;   
+}
+
+.small-header #entries {
+    margin-right:20px; 
+    margin-top: 20px;      
+}
+
+header ul li{
+	display: inline;
+	border: 1px;
+	border-radius: 5px;
+}
+
+.small-header ul li{
+	margin-right: 5px;
+	padding-top: 8px;
+	padding-right: 6px;
+	padding-bottom: 4px;
+	padding-left: 6px;
+	font-size: 70%;
+}
+
+.large-header ul li{
+	margin-right: 10px;
+	padding-top: 12px;
+	padding-right: 10px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+}
+
+.active{
+	background-color: yellow;
+	color: red;
+}
+
+#e1, #e2, #e3{
+	cursor: pointer;
+}
+
+header, span, ul, li{
+  transition: all 0.5s;
+  -moz-transition: all 0.5s; /* Firefox 4 */
+  -webkit-transition: all 0.5s; /* Safari and Chrome */
+  -o-transition: all 0.5s; /* Opera */
+}
+
+.section1{
+	/*background: #FF3300;*/
+	position: relative;
+	height: 550px;
+	/*color:$font_color;*/
+	margin-top: 50px;
+	width: 100%;
+	z-index:1;
+	border: 1px solid;
+	overflow: hidden;
+	min-width: 900px;
+}
+
+.section1 img{
+	position: fixed;
+	z-index: -1;
+}
+
+h3{
+	color: red;
+	font-size: 2em;
+	margin-top: 80px;
+	position: absolute;
+	margin-left: 5%;
+	margin-right: 25%;
+	/*width: 80%;*/
+}
+
+.section2{
+	position: relative;
+	height: 800px;
+	width: 100%;
+	border: 1px solid;
+	margin-top: 0;
+	z-index:1;
+	background-color: #99FF33;
+	min-width: 900px;
+}
+
+.section2 .kaitou{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	text-align: center; 
+	font-size: 5em;
+}
+
+
+.section2 .images{
+	margin-top: 100px;
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	/*border: 1px solid;*/
+	overflow: hidden;	
+}
+
+.img{
+	float: left;
+	margin-left: 35px;
+	width: 240px;
+	overflow: hidden;
+	-webkit-transition-property: width; /* Safari */
+  -webkit-transition-duration: 5s; /* Safari */
+  transition-property: width;
+  transition-duration: 2s;
+}
+
+.img:hover{
+	opacity: 0.4;
+	cursor: crosshair;
+	width: 270px;
+}
+
+.placeholder{
+	clear: both;
+}
+
+.section2 #video{
+	margin-top: 100px;
+	height: 300px;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.section2 video{
+	width: 600px;
+	height: 300px;
+}
+
+#popup1, #popup2, #popup3{
+	display: none;
+	position: fixed;
+	z-index: 100; /*larger than the header*/
+	top: 10px;
+	/*width: 300px;*/
+}
+
+#close1, #close2, #close3{
+	display: none;
+	position: fixed;
+	z-index: 101;
+	background-color: red;
+	top: 10px;
+}
+
+
+
+
+
+.section3{
+	position: relative;
+	width: 100%;
+	height: 500px;
+	margin-top: 0;
+	background-color: #FFFF66;
+	z-index:1;
+	overflow: hidden;
+	min-width: 900px;
+}
+
+.section3 #photo{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	text-align: center; 
+	font-size: 5em;
+}
+
+.section3 .s3_images{
+	margin-top: 50px;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+	/*border: 1px solid;*/
+	overflow: hidden;
+}
+
+#left{
+	left: -50px;
+}
+#right{
+	right: -50px;
+}
+.carosel{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	background-color: green;
+	border: 1px solid;
+	border-radius: 50%;
+	margin-top: 175px;
+	line-height: 100px;
+}
+#left #larrow{
+	margin-left: 55px;
+}
+#right #rarrow{
+	margin-left: 29px;
+}
+
+button:hover{
+	background-color: yellow;
+	cursor: pointer;
+}
+
+footer{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	background-color: #2C3E50;
+	width: 100%;
+	z-index: 2;
+	min-width: 900px;
+}
+
+footer .social_logo{
+	margin-top:0;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#facebook, #twitter{
+	float: left;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+#facebook image, #twitter image{
+	cursor: pointer;
+}
+

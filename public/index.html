@@ -4,14 +4,88 @@
   <meta charset="UTF-8">
   <title>MP1 Starter</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="lib/font-awesome-4.3.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/ico" href="img/favicon_flake.ico">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <div class="test"> My name is Anthony.</div>
+		<header class="large-header">
+				<span id="name">PingYao</span>
+      	<ul id="entries">
+	        <li class="active" id="e1">Introduction</li>
+	        <li id="e2">Attractions</li>
+	        <li id="e3">Photos</li>
+      	</ul>
+		</header>
+ 	
+ 	<div class="section1">
+      <img src="img/Pingyao-City-Walls-542.jpg" style = "width: 100%" alt=" " />
+      <h3>
+        <span class="slideContent">
+          Short Introduction<br/>
+          Pingyao (Mandrin: 平遥) is an old county located in northen central China. Its history dates back some 2,700 years. During the Qing Dynasty (1644 - 1922), it was a financial center of China. Now it is renowned for the well-preserved city walls and other architectural styles. Pingyao is a <strong style="vertical-align: 10px; color: blue">World Heritage Site</strong>.
+        </span>
+      </h3>
+  </div>
+	
+ 	<div class="section2">
+    <div class="kaitou">
+        <i class="fa fa-diamond fa-1x"></i>&nbsp; Top Attractions
+    </div>
+    <div class="images">
+      <div class="img" id="small1"><img src="img/pingyao.jpg" style = "width: 100%" salt=" " /></div>
+      <div class="img" id="small2"><img src="img/ping-wall460.jpg" style = "width: 100%" salt=" " /></div>
+      <div class="img" id="small3"><img src="img/shuanglin.jpg" style= "width: 100%" salt=" " /></div>
+      <div class="placeholder"></div>
+    </div>
+    <div id="video">
+      <video controls>
+        <source src="img/pingyao.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
 
-  <script src="js/script.js"></script>
+  <section class="section3">
+    <div id="photo"><i class="fa fa-camera fa-1x"></i>&nbsp; Photos</div>
+    <div class="carosel" id="left">
+        <button id="larrow">&lt&lt</button>
+    </div>
+    <div class="carosel" id="right">
+        <button id="rarrow">&gt&gt</button>
+    </div> 
+    <div class="s3_images">
+      <div id="i1"><img src="img/pycity.jpg" style = "width: 100%" alt="Smiley face" /></div>
+      <div id="i2"><img src="img/night2.jpg" style = "width: 100%" salt=" " /></div>
+      <div id="i3"><img src="img/pybd.jpg" style= "width: 100%" salt=" " /></div>
+    </div>
+  </section>
+
+  <div class="popup">
+    <div id="popup1">
+      <img src="img/pingyao.jpg" style = "width: 100%" salt=" " /> 
+      <span id="close1"><h2>X</h2></span>
+    </div>
+    <div id="popup2">
+      <img src="img/ping-wall460.jpg" style = "width: 100%" salt=" " />
+      <span id="close2"><h2>X</h2></span>
+    </div>
+      <div id="popup3">
+        <img src="img/shuanglin.jpg" style= "width: 100%" salt=" " />
+        <span id="close3"><h2>X</h2></span>
+      </div>
+  </div>
+
+  <footer>
+    <div class="social_logo">
+      <div id="facebook"><a href="www.facebook.com"/><img src="img/fb_logo.png" alt=" " /></div>
+      <div id="twitter"><a href="www.twitter.com"/><img src="img/twitter-logo.png" alt=" " /></div>
+      <div class="placeholder"></div>
+    </div>
+  </footer>
+  
+
   <script src="lib/jquery-2.1.3.min/index.js"></script>
+  <script src="js/script.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
 </body>
 </html>
